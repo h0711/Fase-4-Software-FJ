@@ -14,10 +14,10 @@ registrar_evento("Inicio del sistema Software FJ")
 try:
     # Registro del cliente
     cliente1 = Cliente(
-        "123456789",
-        "Maria Perez",
-        "maria@gmail.com",
-        "3124567890"
+        "1007400888",
+        "Heidy Saavedra",
+        "7hcsl11@gmail.com",
+        "3232843404"
     )
 
     print(sistema.registrar_cliente(cliente1))
