@@ -22,25 +22,25 @@ def ejecutar_prueba(nombre, funcion):
         registrar_error(f"Error inesperado en {nombre}: {error}")
 
     else:
-        print("Resultado: Operación exitosa")
+        print("Resultado: Operacion exitosa")
         registrar_evento(f"Prueba exitosa: {nombre}")
 
     finally:
         print("Prueba finalizada:", nombre)
 
 
-# PRUEBAS DE VALIDACIÓN
+# PRUEBAS DE VALIDACION
 
 def cliente_invalido():
-    Cliente("123", "", "maria@gmail.com", "3124567890")
+    Cliente("123", "", "7h@gmail.com", "3232843477")
 
 
 def correo_invalido():
-    Cliente("124", "Maria Perez", "mariagmail.com", "3124567890")
+    Cliente("124", "Jaime Gonzalez", "gonzgmail.com", "3120012090")
 
 
 def telefono_invalido():
-    Cliente("125", "Maria Perez", "maria@gmail.com", "abc")
+    Cliente("125", "Maribel Gomez", "mago@gmail.com", "abc")
 
 
 def servicio_invalido():
@@ -56,13 +56,13 @@ def asesoria_invalida():
 
 
 def duracion_invalida():
-    cliente = Cliente("126", "Carlos Ruiz", "carlos@gmail.com", "3101234567")
+    cliente = Cliente("126", "Carlos Ruiz", "carl@gmail.com", "3122234767")
     sala = ReservaSala(20)
     Reserva(cliente, sala, 0)
 
 
 def procesar_sin_confirmar():
-    cliente = Cliente("127", "Laura Diaz", "laura@gmail.com", "3111234567")
+    cliente = Cliente("127", "Sebastian Castro", "sebas@gmail.com", "3178234567")
     sala = ReservaSala(20)
     reserva = Reserva(cliente, sala, 2)
     reserva.procesar()
@@ -121,28 +121,28 @@ def calcular_costo_completo():
 # LISTA DE LAS 13 PRUEBAS
 
 pruebas = [
-    ("Nombre de cliente vacío", cliente_invalido),
-    ("Correo electrónico incorrecto", correo_invalido),
-    ("Teléfono incorrecto", telefono_invalido),
+    ("Nombre de cliente vacio", cliente_invalido),
+    ("Correo electronico incorrecto", correo_invalido),
+    ("Telefono incorrecto", telefono_invalido),
     ("Capacidad de sala incorrecta", servicio_invalido),
     ("Cantidad de equipos incorrecta", equipo_invalido),
-    ("Especialidad vacía", asesoria_invalida),
-    ("Duración de reserva incorrecta", duracion_invalida),
+    ("Especialidad vacia", asesoria_invalida),
+    ("Duracion de reserva incorrecta", duracion_invalida),
     ("Procesar reserva sin confirmar", procesar_sin_confirmar),
     ("Cancelar reserva pendiente", cancelar_reserva),
     ("Crear cliente correctamente", crear_cliente_correcto),
     ("Crear reserva sin cliente", crear_reserva_sin_cliente),
-    ("Calcular costo con impuesto inválido", impuesto_invalido),
+    ("Calcular costo con impuesto invalido", impuesto_invalido),
     ("Procesar dos veces la misma reserva", procesar_reserva_dos_veces),
-    ("Cálculo de costo normal", calcular_costo_normal),
-    ("Cálculo de costo con impuesto", calcular_costo_con_impuesto),
-    ("Cálculo de costo con descuento", calcular_costo_con_descuento),
-    ("Cálculo de costo con impuesto y descuento", calcular_costo_completo)
+    ("Calculo de costo normal", calcular_costo_normal),
+    ("Calculo de costo con impuesto", calcular_costo_con_impuesto),
+    ("Calculo de costo con descuento", calcular_costo_con_descuento),
+    ("Calculo de costo con impuesto y descuento", calcular_costo_completo)
 ]
 
 
 print("===================================")
-print(" PRUEBAS DE VALIDACIÓN Y ERRORES")
+print(" PRUEBAS DE VALIDACION Y ERRORES")
 print("===================================")
 
 for nombre, funcion in pruebas:
@@ -153,4 +153,4 @@ print(" TOTAL DE PRUEBAS:", len(pruebas))
 print(" FIN DE LAS PRUEBAS")
 print("===================================")
 
-registrar_evento("Finalización de las 13 pruebas")
+registrar_evento("Finalizacion de las 13 pruebas")

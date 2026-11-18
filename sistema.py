@@ -14,14 +14,14 @@ class SistemaGestion:
 
     def registrar_cliente(self, cliente):
         if not isinstance(cliente, Cliente):
-            raise ErrorSistema("El objeto no es un cliente válido.")
+            raise ErrorSistema("El objeto no es un cliente valido.")
 
         self.clientes.append(cliente)
         return "Cliente registrado correctamente."
 
     def registrar_servicio(self, servicio):
         if not isinstance(servicio, Servicio):
-            raise ErrorSistema("El objeto no es un servicio válido.")
+            raise ErrorSistema("El objeto no es un servicio valido.")
 
         self.servicios.append(servicio)
         return "Servicio registrado correctamente."

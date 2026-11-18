@@ -25,5 +25,5 @@ class ErrorReserva(ErrorSistema):
 
 
 class ErrorValidacion(ErrorSistema):
-    """Errores ocasionados por datos inválidos."""
+    """Errores ocasionados por datos invalidos."""
     pass

@@ -14,15 +14,15 @@ registrar_evento("Inicio del sistema Software FJ")
 try:
     # Registro del cliente
     cliente1 = Cliente(
-        "1007400888",
+        "1007400800",
         "Heidy Saavedra",
         "7hcsl11@gmail.com",
-        "3232843404"
+        "3202843404"
     )
 
     print(sistema.registrar_cliente(cliente1))
 
-    # Creación y registro de servicios
+    # Creacion y registro de servicios
     sala = ReservaSala(20)
     equipo = AlquilerEquipo("Computadores", 3)
     asesoria = AsesoriaEspecializada("Desarrollo de software")
@@ -30,7 +30,7 @@ try:
     for servicio in [sala, equipo, asesoria]:
         print(sistema.registrar_servicio(servicio))
 
-    # Creación y procesamiento de reservas
+    # Creacion y procesamiento de reservas
     servicios = [
         (sala, 2),
         (equipo, 2),
@@ -64,13 +64,13 @@ try:
     registrar_evento("Operaciones principales finalizadas")
 
 except Exception as error:
-    print("Se presentó un error:", error)
+    print("Se presento un error:", error)
     registrar_error(str(error))
 
 finally:
     print("\n===================================")
     print("       FIN DEL SISTEMA")
     print("===================================")
-    registrar_evento("Finalización del sistema")
+    registrar_evento("Finalizacion del sistema")
 
 

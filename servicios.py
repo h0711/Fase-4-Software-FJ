@@ -29,7 +29,7 @@ class Servicio(ABC):
 
         if (isinstance(duracion, bool) or
                 not isinstance(duracion, (int, float)) or duracion <= 0):
-            raise ErrorValidacion("La duración debe ser mayor que cero.")
+            raise ErrorValidacion("La duracion debe ser mayor que cero.")
 
         if (isinstance(impuesto, bool) or
                 not isinstance(impuesto, (int, float)) or not 0 <= impuesto <= 100):
@@ -65,7 +65,7 @@ class ReservaSala(Servicio):
 
     def calcular_costo(self, duracion, impuesto=0, descuento=0):
         if not self.validar_parametros():
-            raise ErrorServicio("La capacidad de la sala no es válida.")
+            raise ErrorServicio("La capacidad de la sala no es valida.")
 
         return super().calcular_costo(duracion, impuesto, descuento)
 
@@ -93,7 +93,7 @@ class AlquilerEquipo(Servicio):
 
     def calcular_costo(self, duracion, impuesto=0, descuento=0):
         if not self.validar_parametros():
-            raise ErrorServicio("Los datos del equipo no son válidos.")
+            raise ErrorServicio("Los datos del equipo no son validos.")
 
         return super().calcular_costo(
             duracion * self.cantidad, impuesto, descuento

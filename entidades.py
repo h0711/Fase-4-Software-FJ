@@ -35,18 +35,18 @@ class Cliente(Entidad):
 
         # Validar correo
         if not isinstance(correo, str) or "@" not in correo or "." not in correo:
-            raise ErrorCliente("El correo electrónico no es válido.")
+            raise ErrorCliente("El correo electronico no es valido.")
 
         # Validar telefono
         if not str(telefono).isdigit() or len(str(telefono)) < 7:
-            raise ErrorCliente("El numero de telefono no es válido.")
+            raise ErrorCliente("El numero de telefono no es valido.")
 
         # Atributos privados (encapsulación)
         self.__nombre = nombre.strip()
         self.__correo = correo.strip()
         self.__telefono = str(telefono)
 
-    # Método para mostrar información
+    # Metodo para mostrar informacion
     def mostrar_informacion(self):
         return (
             f"Identificacion: {self._identificador}\n"
